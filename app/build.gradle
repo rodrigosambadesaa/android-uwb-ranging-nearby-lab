@@ -1,0 +1,27 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.rodrigosambade.uwbranging'
+    compileSdk {
+        version = release(37) { minorApiLevel = 1 }
+    }
+    defaultConfig {
+        applicationId 'com.rodrigosambade.uwbranging'
+        minSdk 31
+        targetSdk 37
+        versionCode 1
+        versionName '1.0'
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+}
+
+dependencies {
+    implementation "androidx.core.uwb:uwb:1.0.0"
+    implementation "androidx.core.uwb:uwb-rxjava3:1.0.0"
+    implementation "io.reactivex.rxjava3:rxjava:3.1.12"
+}
